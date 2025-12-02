@@ -1,0 +1,15 @@
+{
+  "name": "Controle-Estoque Dev",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "backend",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/sh"
+  }
+}
