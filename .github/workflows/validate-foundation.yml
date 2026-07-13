@@ -1,0 +1,23 @@
+name: Validate RA foundation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  static-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate shell script
+        run: bash -n build-android.sh
+      - name: Validate content JSON
+        run: python -m json.tool Assets/Resources/Content/alphabet-pt-br.json > /dev/null
+      - name: Validate required files
+        run: |
+          test -f Assets/Scenes/Menu.unity
+          test -f Assets/Scenes/SampleScene.unity
+          test -f Assets/Editor/AndroidBuildPipeline.cs
+          test -f Assets/Editor/ProjectValidation.cs
