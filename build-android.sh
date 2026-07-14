@@ -26,7 +26,7 @@ OUTPUT_PATH="${CUSTOM_OUTPUT:-${DEFAULT_OUTPUT}}"
 if [[ -z "${UNITY_BIN}" ]]; then
   for candidate in \
     "/opt/unity/Editor/Unity" \
-    "/Applications/Unity/Hub/Editor/2019.4.41f2/Unity.app/Contents/MacOS/Unity"; do
+    "/Applications/Unity/Hub/Editor/2019.4.41f1/Unity.app/Contents/MacOS/Unity"; do
     if [[ -x "${candidate}" ]]; then
       UNITY_BIN="${candidate}"
       break
@@ -40,7 +40,7 @@ if [[ -z "${UNITY_BIN}" ]]; then
   elif command -v unity-editor >/dev/null 2>&1; then
     UNITY_BIN="$(command -v unity-editor)"
   else
-    echo "Unity não encontrado. Defina UNITY_BIN com o executável do Unity 2019.4.41f2." >&2
+    echo "Unity não encontrado. Defina UNITY_BIN com o executável do Unity 2019.4.41f1." >&2
     exit 1
   fi
 fi
