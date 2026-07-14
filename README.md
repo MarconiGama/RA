@@ -5,11 +5,11 @@ Aplicativo educacional de realidade aumentada criado em Unity e Vuforia. O proje
 ## Ambiente congelado do projeto legado
 
 - projeto originalmente criado no Unity `2019.4.20f1`;
-- versão operacional adotada: Unity `2019.4.41f2`;
+- versão operacional adotada: Unity `2019.4.41f1`;
 - cenas obrigatórias: `Assets/Scenes/Menu.unity` e `Assets/Scenes/SampleScene.unity`;
 - target inicial: Android;
 - Vuforia: integração legada incorporada ao projeto;
-- Android SDK, NDK e JDK: instalar os módulos recomendados pelo Unity Hub para a versão `2019.4.41f2`.
+- Android SDK, NDK e JDK: instalar os módulos recomendados pelo Unity Hub para a versão `2019.4.41f1`.
 
 Não abra nem atualize o projeto diretamente no Unity 6. Faça qualquer migração moderna em branch separada e valide todos os targets A–Z.
 
