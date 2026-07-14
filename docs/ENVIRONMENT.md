@@ -3,14 +3,14 @@
 ## Linha legada suportada
 
 - projeto originalmente criado no Unity Editor `2019.4.20f1`;
-- versão operacional adotada: Unity Editor `2019.4.41f2`;
+- versão operacional adotada: Unity Editor `2019.4.41f1`;
 - projeto Android com Vuforia legado incorporado;
 - cenas: `Menu.unity` e `SampleScene.unity`;
 - módulos Android instalados pelo Unity Hub da mesma versão do Editor.
 
 ## Instalação recomendada
 
-No Unity Hub, instale a versão `2019.4.41f2` com:
+No Unity Hub, instale a versão `2019.4.41f1` com:
 
 - Android Build Support;
 - Android SDK & NDK Tools;
@@ -18,7 +18,7 @@ No Unity Hub, instale a versão `2019.4.41f2` com:
 
 Use os componentes fornecidos pelo Hub para evitar incompatibilidade entre Gradle, SDK, NDK e JDK.
 
-A revisão `2019.4.41f2` permanece na mesma linha LTS do projeto original e inclui a correção de segurança disponibilizada para a série 2019.4, além de uma correção posterior de licenciamento.
+A revisão `2019.4.41f1` permanece na mesma linha LTS do projeto original e é a versão operacional adotada para estabilização e build do legado.
 
 ## Migração futura
 
