@@ -9,11 +9,11 @@ $ProjectDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $UnityBin = $env:UNITY_BIN
 
 if ([string]::IsNullOrWhiteSpace($UnityBin)) {
-    $UnityBin = "C:\Program Files\Unity\Hub\Editor\2019.4.20f1\Editor\Unity.exe"
+    $UnityBin = "C:\Program Files\Unity\Hub\Editor\2019.4.41f2\Editor\Unity.exe"
 }
 
 if (-not (Test-Path $UnityBin)) {
-    throw "Unity não encontrado em '$UnityBin'. Defina UNITY_BIN com o Unity 2019.4.20f1."
+    throw "Unity não encontrado em '$UnityBin'. Defina UNITY_BIN com o Unity 2019.4.41f2."
 }
 
 if ($Profile -eq "production") {
