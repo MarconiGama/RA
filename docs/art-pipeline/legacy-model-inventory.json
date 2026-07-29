@@ -1,0 +1,189 @@
+{
+  "generatedAt": "2026-07-29T18:18:40.1842696-04:00",
+  "blenderVersion": "2.93.18",
+  "legacyModels": [
+    {
+      "letter": "A",
+      "sizeBytes": 1369988,
+      "sha256": "2f0d0c161cb1f13cd83a206827889b4464a8d158993318e8548270f32e022441",
+      "path": "Assets/Objetos/RaA.blend",
+      "exists": true
+    },
+    {
+      "letter": "B",
+      "sizeBytes": 1370912,
+      "sha256": "8c5af55a6a3f0f95ae139ed6def8e6de35b029daf57a687d881506a10344ee48",
+      "path": "Assets/Objetos/RaB.blend",
+      "exists": true
+    },
+    {
+      "letter": "C",
+      "sizeBytes": 979324,
+      "sha256": "6051bd5eed69d9fac2b83c912ce5bfb826bbeaf1986803d766b17c5c0351139f",
+      "path": "Assets/Objetos/RaC.blend",
+      "exists": true
+    },
+    {
+      "letter": "D",
+      "sizeBytes": 1118952,
+      "sha256": "e61440a68426a7b0b0f9f2cbba2e61e76239ae1bd4d467d2e1d8d2431bca6ff0",
+      "path": "Assets/Objetos/RaD.blend",
+      "exists": true
+    },
+    {
+      "letter": "E",
+      "sizeBytes": 1388392,
+      "sha256": "1a55570f6e2d6274af52d4698c210dc9b684148b4b836b08a7804e6699d7aee4",
+      "path": "Assets/Objetos/RaE.blend",
+      "exists": true
+    },
+    {
+      "letter": "F",
+      "sizeBytes": 1220552,
+      "sha256": "1bf0aeb34d7b10130211856dd89a86c43cd43ec50ad31dacb13e7cc8211f6f62",
+      "path": "Assets/Objetos/RaF.blend",
+      "exists": true
+    },
+    {
+      "letter": "G",
+      "sizeBytes": 1211688,
+      "sha256": "743238dbeab15d94aa94d59153fcf5e114e109b6f9107a014330bc591f657f02",
+      "path": "Assets/Objetos/RaG.blend",
+      "exists": true
+    },
+    {
+      "letter": "H",
+      "sizeBytes": 1332208,
+      "sha256": "a6480cff524004fc74bb45bc5d555ac4c95f2e67dfe746abb804f74d5f8ef227",
+      "path": "Assets/Objetos/RaH.blend",
+      "exists": true
+    },
+    {
+      "letter": "I",
+      "sizeBytes": 1224724,
+      "sha256": "7ab68c8901232437ea261072522088befb70d0960d65d538717701925bd5dc64",
+      "path": "Assets/Objetos/RaI.blend",
+      "exists": true
+    },
+    {
+      "letter": "J",
+      "sizeBytes": 1169096,
+      "sha256": "3f7142338dadc6394a69eacb261e2cbf971a473a8defeec7d275429c285bd96c",
+      "path": "Assets/Objetos/RaJ.blend",
+      "exists": true
+    },
+    {
+      "letter": "K",
+      "sizeBytes": 1128552,
+      "sha256": "910fe94712fa2604be15408d5c39fbb9b061a50b97db7d238108af540bf03936",
+      "path": "Assets/Objetos/RaK.blend",
+      "exists": true
+    },
+    {
+      "letter": "L",
+      "sizeBytes": 893152,
+      "sha256": "878f091e68ad0857341fb9642f02b5b3248050b23f00343592af279f4db6a889",
+      "path": "Assets/Objetos/RaL.blend",
+      "exists": true
+    },
+    {
+      "letter": "M",
+      "sizeBytes": 942272,
+      "sha256": "991e0e794c84385a3650bee86b3bb94d97525149feb9e5917bc2202915067d63",
+      "path": "Assets/Objetos/RaM.blend",
+      "exists": true
+    },
+    {
+      "letter": "N",
+      "sizeBytes": 886080,
+      "sha256": "8cace18b40c440c4b37d6fd570fb87e40609fd728bb96e51929e8bacd5e46692",
+      "path": "Assets/Objetos/RaN.blend",
+      "exists": true
+    },
+    {
+      "letter": "O",
+      "sizeBytes": 1034940,
+      "sha256": "ceb5227f794a37ecb0c7c998eec0b351c73733eb2661e1af8d65e60e5e25f9c5",
+      "path": "Assets/Objetos/RaO.blend",
+      "exists": true
+    },
+    {
+      "letter": "P",
+      "sizeBytes": 1060808,
+      "sha256": "43a4b260afc1e764c9757bf99160ae66233085e47d815e53c218755734875ecc",
+      "path": "Assets/Objetos/RaP.blend",
+      "exists": true
+    },
+    {
+      "letter": "Q",
+      "sizeBytes": 1276984,
+      "sha256": "fd79e53b71dde462a64f19c55bf1141f0777a2eb4c601e8cf34985aa62b70191",
+      "path": "Assets/Objetos/RaQ.blend",
+      "exists": true
+    },
+    {
+      "letter": "R",
+      "sizeBytes": 1367968,
+      "sha256": "6f90f47139f9024fdc4b81e5e8a1fcb09d3805fa28a992e1a11158e90a991e91",
+      "path": "Assets/Objetos/RaR.blend",
+      "exists": true
+    },
+    {
+      "letter": "S",
+      "sizeBytes": 1086724,
+      "sha256": "893328c2d76367abb7d8b7021767af42ba569178a1e37a3e4e0e9f78b5884d71",
+      "path": "Assets/Objetos/RaS.blend",
+      "exists": true
+    },
+    {
+      "letter": "T",
+      "sizeBytes": 1023184,
+      "sha256": "1b26edf74cb4d79f8f8dac40811709902e6e91fca0a3b7188610f2dae29fb7b7",
+      "path": "Assets/Objetos/RaT.blend",
+      "exists": true
+    },
+    {
+      "letter": "U",
+      "sizeBytes": 996744,
+      "sha256": "f91b4d56ff571cf3cc12479f6c3274dafd7addd8ce090920791035c110efacb6",
+      "path": "Assets/Objetos/RaU.blend",
+      "exists": true
+    },
+    {
+      "letter": "V",
+      "sizeBytes": 933504,
+      "sha256": "f8e5b659b9592682f65df990c4e7cfd78b1b80d2828d07a263243f0b5e7a6dcd",
+      "path": "Assets/Objetos/RaV.blend",
+      "exists": true
+    },
+    {
+      "letter": "W",
+      "sizeBytes": 1185008,
+      "sha256": "73b74c1457dc411946e7c938e8dff42e8b454c050c3e42d4f576c150b351da5b",
+      "path": "Assets/Objetos/RaW.blend",
+      "exists": true
+    },
+    {
+      "letter": "X",
+      "sizeBytes": 1179836,
+      "sha256": "fda30013f2a72bcaeafc7a2b2e804d084145ead50d9087a5f7f78e28eb1e1bdd",
+      "path": "Assets/Objetos/RaX.blend",
+      "exists": true
+    },
+    {
+      "letter": "Y",
+      "sizeBytes": 1021924,
+      "sha256": "8115763b300e55211910f3f59727338bc72b062dad12bbd4f6df464012cbede6",
+      "path": "Assets/Objetos/RaY.blend",
+      "exists": true
+    },
+    {
+      "letter": "Z",
+      "sizeBytes": 1183864,
+      "sha256": "7d5e111810b82f28ea523c4482a47842d51dca789983950270ec283ffd59b94d",
+      "path": "Assets/Objetos/RaZ.blend",
+      "exists": true
+    }
+  ]
+}
+

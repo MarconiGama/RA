@@ -9,6 +9,15 @@ UserSettings/
 MemoryCaptures/
 Recordings/
 
+# Blender generated/temporary files
+*.blend1
+*.blend2
+*.blend@
+*.autosave
+autosave/
+__pycache__/
+*.pyc
+
 # IDE files
 .vs/
 .idea/
