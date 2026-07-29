@@ -31,9 +31,10 @@ try {
     if (-not (Test-Path -LiteralPath $Blender -PathType Leaf)) {
         throw "Blender 2.93 não encontrado em $Blender"
     }
-    $version = (& $Blender --version 2>&1 | Select-Object -First 1)
-    if ($version -notmatch "Blender 2\.93\.18") {
-        throw "Versão inesperada do Blender: $version"
+    $versionOutput = @(& $Blender --version 2>&1)
+    $version = @($versionOutput | Where-Object { $_ -match "^Blender 2\.93\.18" } | Select-Object -First 1)
+    if ($LASTEXITCODE -ne 0 -or $version.Count -ne 1) {
+        throw "Blender 2.93.18 não confirmado. Saída: $($versionOutput -join ' | ')"
     }
     if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
         throw "Git não encontrado"
@@ -95,4 +96,3 @@ catch {
 finally {
     Set-Location $RepositoryRoot
 }
-

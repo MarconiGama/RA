@@ -1,0 +1,16 @@
+name: Alphabet asset validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - agent/scale-ra-foundation
+
+jobs:
+  static-validation:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate alphabet asset set
+        shell: pwsh
+        run: ./Tools/Blender/validate-alphabet-static.ps1
