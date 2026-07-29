@@ -1,0 +1,31 @@
+Pre-restoration Vuforia API/source references (2026-07-29)
+
+Assets/Resources/VuforiaConfiguration.asset: VuforiaConfiguration serialized asset
+Assets/Vuforia/Editor/Scripts/OpenSourceInitializer.cs: DefaultTrackableBehaviourPlaceholder, DefaultTrackableEventHandler
+Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs: VuforiaMonoBehaviour, VuforiaUnity, VuforiaRuntime.Instance, VuforiaConfiguration.Instance
+Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs: IObjectRecoEventHandler, TargetFinder
+Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs: ITrackableEventHandler, TrackableBehaviour and TrackableBehaviour.Status
+Assets/Vuforia/Scripts/Internal/RuntimeOpenSourceInitializer.cs: IUnityCompiledFacade, IUnityRenderPipeline, IUnityAndroidPermissions
+Assets/Scenes/SampleScene.unity: managed Vuforia assembly GUID bab6fa851cf5a1a4bba3cec5f191cb8e; DefaultTrackableEventHandler GUID 5a917f0af64a6423093132dab321c15f; DefaultInitializationErrorHandler GUID c47f92041efbb4b429a4eafca855ebe3
+
+Searched with:
+VuforiaBehaviour
+VuforiaConfiguration
+ImageTargetBehaviour
+TrackableBehaviour
+DefaultTrackableEventHandler
+ObserverBehaviour
+VuforiaEngine
+VuforiaRuntime
+VuforiaARController
+VuforiaBehaviour.Instance
+VuforiaMonoBehaviour
+ITrackableEventHandler
+IObjectRecoEventHandler
+TargetFinder
+IUnityCompiledFacade
+IUnityRenderPipeline
+IUnityAndroidPermissions
+
+ObserverBehaviour references: 0
+Vuforia 10/11 API references: 0

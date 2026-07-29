@@ -1,0 +1,1052 @@
+{
+  "generated": "2026-07-29",
+  "phase": "pre-restoration",
+  "root": "C:/Projetos/RA",
+  "count": 182,
+  "files": [
+    {
+      "path": "Assets/Vuforia/Databases.meta",
+      "size": 180,
+      "sha256": "be059cda79bf82e6a29dd1727f877dccf45ffd4dcf6e098c125c58c860285195",
+      "guid": "88d434469196e9e4d804d005fdd71bbc"
+    },
+    {
+      "path": "Assets/Vuforia/Editor.meta",
+      "size": 112,
+      "sha256": "15cbc91515bdf60c7b5fa842b22f77880591337fe296b34fe6e117343bd0fa36",
+      "guid": "cbecf958ea1734648953def7bbb87ccc"
+    },
+    {
+      "path": "Assets/Vuforia/Fonts.meta",
+      "size": 112,
+      "sha256": "c8a0e6534e06876539800fcc5a4b13fc7626f336dbd3a37658b7e32250df94c5",
+      "guid": "ba2ea6a6b0b753747998d0f899c82217"
+    },
+    {
+      "path": "Assets/Vuforia/Materials.meta",
+      "size": 62,
+      "sha256": "7e7bc9924150d116f285e2707fc8a5c77603cf1b0280f04e31d5f3bd7ee7a88b",
+      "guid": "342d2a265f327ee4b877d8d07fd0493e"
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs.meta",
+      "size": 223,
+      "sha256": "9705f1943af29b37a063fe254f0bcd23daaec3ff17d196d4a63f1990d2287806",
+      "guid": "fff2b2647734bdb4ca674be90110de4b"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts.meta",
+      "size": 200,
+      "sha256": "01985d6d7b1fad7f7727838b5b277a0bbd7559cded642cc1feb6e5eb6245245c",
+      "guid": "d3deae265caa6a947b9981c2a1bc15f0"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders.meta",
+      "size": 62,
+      "sha256": "82f46b156b43d8b6dcd8923fcc3a8300799d6cc57d1a866a8f9efc539e8b9ee4",
+      "guid": "045174a3e0bdedf4a9c6bfc80ea9dcf2"
+    },
+    {
+      "path": "Assets/Vuforia/Textures.meta",
+      "size": 62,
+      "sha256": "5fafecaced3b97a41946eb3efdb8376d23287766f8679876d583c2e121e3c086",
+      "guid": "5974f532865442942bd739871e9c63c3"
+    },
+    {
+      "path": "Assets/Vuforia/version",
+      "size": 38,
+      "sha256": "63ff221cfc2c23ad402bf25088586e04bfeac341ca79f04901302d618acf86bf",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/version.meta",
+      "size": 162,
+      "sha256": "22d1742bd1528e14e52ee02aaa9db9e920589f24c1cd0db84b30d1c4b45ebf58",
+      "guid": "b514747b842be7b4793b84f6f1f70fdd"
+    },
+    {
+      "path": "Assets/Vuforia/Databases/Emulator.meta",
+      "size": 180,
+      "sha256": "ff8ee213f4d7dd6f4ebb711ac4c45c264f1e0cd720a95aad08a300ec22e33712",
+      "guid": "0e7e44176fbdc9b4aa7cfe18b688106f"
+    },
+    {
+      "path": "Assets/Vuforia/Databases/ForPrint.meta",
+      "size": 180,
+      "sha256": "145e45c05d1b5691c1e20e264dff92c4952d343dd5dd2219ab97f463a055c1c5",
+      "guid": "a5d9cd04a9a628f4a948008e0994002c"
+    },
+    {
+      "path": "Assets/Vuforia/Databases/Emulator/VuforiaEmulator.dat",
+      "size": 141906,
+      "sha256": "b712739ee062f7f15cef1a298e6323109e0c9f2b764a5254781b44d5268f6c55",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Databases/Emulator/VuforiaEmulator.dat.meta",
+      "size": 162,
+      "sha256": "859f053e2356e5fd0b90fe0fa3fa39570ab52541ea2d418bb647a01704ed64cd",
+      "guid": "028d433ce54ebfb4091e1df641b8aabb"
+    },
+    {
+      "path": "Assets/Vuforia/Databases/Emulator/VuforiaEmulator.xml",
+      "size": 275,
+      "sha256": "a157df96525fdf287990abe8ee6866a151f8072a62aa38ca22b1e3f5d2d77e7e",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Databases/Emulator/VuforiaEmulator.xml.meta",
+      "size": 165,
+      "sha256": "468d74fbe4f7f11892dd8212567b0d234a76b535cfb4114ceca970d71a5c3df5",
+      "guid": "caf0f3a88341ab549852764c706f63c2"
+    },
+    {
+      "path": "Assets/Vuforia/Databases/ForPrint/Emulator.meta",
+      "size": 180,
+      "sha256": "e6ac3f2cfb8337176f8b866736ca815a81e24a5426ea0bc3afc6861047110c43",
+      "guid": "c02cbb104a9ec194da68d5a7b51517f2"
+    },
+    {
+      "path": "Assets/Vuforia/Databases/ForPrint/Emulator/Emulator Ground Plane.pdf",
+      "size": 708756,
+      "sha256": "a8dd3e95414ad916f6940a857cd548025a3d3fe0e8f8f366f4cf0cbe5c4ac72c",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Databases/ForPrint/Emulator/Emulator Ground Plane.pdf.meta",
+      "size": 162,
+      "sha256": "4ffbfa68cfef49c2fdfd6101d9334624539b76ec5f14a6ad0f94ab95da42c8ac",
+      "guid": "6daafcd4686925745b97ae49e802fd88"
+    },
+    {
+      "path": "Assets/Vuforia/Editor/Scripts.meta",
+      "size": 200,
+      "sha256": "5250d4760ee0827335d5d3ecf882503fec2f9525af76ecd2f0ab92ee91444ad1",
+      "guid": "a2bb3d0318e378941b89de675cd173a3"
+    },
+    {
+      "path": "Assets/Vuforia/Editor/Scripts/OpenSourceInitializer.cs",
+      "size": 2240,
+      "sha256": "6e84545d33f7328d3ff92e473900ea59a6add00eb473797b17c070a54f33f676",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Editor/Scripts/OpenSourceInitializer.cs.meta",
+      "size": 274,
+      "sha256": "cf57a61788c1c0a79aee19c541f0489ae0485e847a701067a0763bd4037de86e",
+      "guid": "06a6d43752a6a6440822e730bd68070c"
+    },
+    {
+      "path": "Assets/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef",
+      "size": 244,
+      "sha256": "8eedb9e2f16dda8eb2707446b118017c8b7fbc3a1b03088885674137d9b6c45b",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef.meta",
+      "size": 173,
+      "sha256": "35a94447d1744058ca5c0038a6bd5d9d30ce46d387524558e78d365be2b3f04a",
+      "guid": "bc72f8689eefa484699b4ed79b36553d"
+    },
+    {
+      "path": "Assets/Vuforia/Fonts/SourceSansPro.ttf",
+      "size": 118880,
+      "sha256": "38ee99b7fac5b8fc3b7e52f08fe883fa5d3affa9f12b45ec65e6c7cb520cb41d",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Fonts/SourceSansPro.ttf.meta",
+      "size": 315,
+      "sha256": "0b29d6b68bcd61565d6a09027ff664a0d134100b2e5c3ad2e894cda086620e27",
+      "guid": "6e4a1744cf113994799d3e46a7c45d99"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/CloudRecoTarget.mat",
+      "size": 812,
+      "sha256": "1726e165a1f56ed8c9b56fceca2a5ccad2582ca20fc44bb007e252d5d36df556",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/CloudRecoTarget.mat.meta",
+      "size": 62,
+      "sha256": "74d4365c0003c327c0b1d895b1753dd4c69e65a69b22825add901efd539e8913",
+      "guid": "de1593a16346ab045974f1cd34fd831f"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/ColoredLines.mat",
+      "size": 719,
+      "sha256": "18849abeab41bf5384bd009c25a96dd4a51b8eee65ffd019c65ffdb8f8ebfb29",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/ColoredLines.mat.meta",
+      "size": 99,
+      "sha256": "3bd2874743845066bd3aba0521e144689ed1195d23197d70513f1fc8de4a96ec",
+      "guid": "bdaddec689357db4ea505c9f4c1b3a10"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/DefaultTarget.mat",
+      "size": 868,
+      "sha256": "78b221617760b3c0756c2b8e99369236c09264212d4abe75efa1836be3191cf3",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/DefaultTarget.mat.meta",
+      "size": 62,
+      "sha256": "9195d7f50458982f8287437ef737cb537bcf69bc16ae1f3055c52b2528e54f45",
+      "guid": "30b97d537113d0441889f1559f555128"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/DepthMask.mat",
+      "size": 726,
+      "sha256": "6d88966636d7aab5d4fe456c64d34ce3e4c5179ff2113926192fd19cb5b7e819",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/DepthMask.mat.meta",
+      "size": 62,
+      "sha256": "6dc122281d4ef4689ce47efa41761daa0b63bc05fd6d638c60e26f6c98bdadf9",
+      "guid": "36b1f386c1720c94889ac11ac9c8c6d1"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/GroundPlaneIndicator.mat",
+      "size": 2142,
+      "sha256": "83f6a8557f0bdfe285dc9c2992eaec5bd5c2ccad35108e641c609dfadddf316b",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/GroundPlaneIndicator.mat.meta",
+      "size": 240,
+      "sha256": "adee15b619759888496dea92aaad15b00f0dd29f4945e1bea0a4685f8f9fb6a7",
+      "guid": "1d214ea2059394d59a1960df0cad1c62"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/GroundPlaneReference.mat",
+      "size": 2142,
+      "sha256": "d0d1063a83c80d1021a10121dc3342ee4a82bbe45a337161dee2717f8001df52",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/GroundPlaneReference.mat.meta",
+      "size": 240,
+      "sha256": "7327a0e41b7fab7bdc5dc7c7985d2907bd3f3dda73a5a2c111ce0988b1e5eb2f",
+      "guid": "b0fca12d4e61246cfa5f9a6d26e48004"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/GuideView2D.mat",
+      "size": 3031,
+      "sha256": "ab769e65180cbeca89b6c47d9b248771a8ed5af131a0855a8ecf8bf4a7e4867c",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/GuideView2D.mat.meta",
+      "size": 187,
+      "sha256": "ca7a9239ff918a6134e43eb6c9b2a02408105a106e99f9c3f8f2390a30f0a440",
+      "guid": "ab44b980790e31f4c84c4c91cdab449a"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/MidAirIndicator.mat",
+      "size": 2160,
+      "sha256": "e59cb3bab89134e0d563a5f278a21dc7892ae5b862cecc3d493dd0cfd47f6326",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/MidAirIndicator.mat.meta",
+      "size": 240,
+      "sha256": "de472a1a831ca805ec66ba4e78c2aca784c3827aa40859f76c7a3bbcadb229df",
+      "guid": "658ef14483bb4437baeced0fce0ae78a"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/MidAirReference.mat",
+      "size": 2137,
+      "sha256": "5ea901542aa45d2bc8eb44990ac26f85e47788eb3a8c26f0a17947b91dd07df9",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/MidAirReference.mat.meta",
+      "size": 240,
+      "sha256": "ba7eae202f0cd6132fe89ee7af8bf08b333c89365b09e6d9ce63f813b27b2dfb",
+      "guid": "2e9b38b0a13ba442b98571aeeb6f3849"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/OutlineOpaque.mat",
+      "size": 3388,
+      "sha256": "e7dc0f0744eec153e7bb62649aef205405dc2d919799bb6a6113c2536071ff0f",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/OutlineOpaque.mat.meta",
+      "size": 187,
+      "sha256": "8b42ee03683154a3fd40a61648c0815b8db780f7ad8a42a9b1b6fd504c5fdf7d",
+      "guid": "1d25c0ce72e58124fa2d482e07c9fcd8"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/StandardCutout.mat",
+      "size": 2227,
+      "sha256": "191ee2a3542098c237df4b038f54e93535c2efa91fca74dbe34a42d1d1671a57",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/StandardCutout.mat.meta",
+      "size": 239,
+      "sha256": "9c9235edba70e7043d0f33c1a55d8271e049c787b2cdb8a7cbd149224bbb47e9",
+      "guid": "a9267223436693a4bb8e35161a24f8ba"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/UserDefinedTarget.mat",
+      "size": 814,
+      "sha256": "08f8b3d9315f14a7ac1a6950a37ff64c534eda120126f94f725769457076ab3a",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/UserDefinedTarget.mat.meta",
+      "size": 62,
+      "sha256": "99f6065535d07e97a6f8d56a8642df54956a1320d18921c81e1520f5310dad8f",
+      "guid": "1b2d001c51171d449b4203bfe281d9bc"
+    },
+    {
+      "path": "Assets/Vuforia/Materials/VirtualButtonPreviewMaterial.mat",
+      "size": 795,
+      "sha256": "75f65db068c7d8dfeeda19082034ae50bafe4a877d6d36176583b2e7f94b7d9e",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Materials/VirtualButtonPreviewMaterial.mat.meta",
+      "size": 99,
+      "sha256": "9f1caa90b70230e0fdcc17a3fd92223baa7983a34ec9e650c707a8e56553168d",
+      "guid": "a88c225b69241164ab829bccf61d8845"
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/DefaultMidAirIndicator.prefab",
+      "size": 3885,
+      "sha256": "809d02467ffa90d0ce58fb851a58b517a8d285c979537f1db44be699b3ee85a1",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/DefaultMidAirIndicator.prefab.meta",
+      "size": 241,
+      "sha256": "f6ada5b0b4efaa3f1f03fa661e842948ecab5f59b0c361ce0e4913aa818247b3",
+      "guid": "e5581564ca4d5f2479d5f1694371ef2f"
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/DefaultPlaneIndicator.prefab",
+      "size": 3884,
+      "sha256": "4ef9b9bf97f903fec0900a93e057de13d6b905217afb12ff8845a6bb4e23eb65",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/DefaultPlaneIndicator.prefab.meta",
+      "size": 241,
+      "sha256": "76475693fe27e8ce1c2dd5ceaa0346dbb26c3cd70d6fab4af3934443760e3907",
+      "guid": "b9ed12c68682d5b49bfa70ee9d71602d"
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/GroundPlaneReference.prefab",
+      "size": 2447,
+      "sha256": "e255aec960003f60b11eb8fe0f49f5d164d446f89a07597948e9bfad1c5042e4",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/GroundPlaneReference.prefab.meta",
+      "size": 241,
+      "sha256": "c90a693dd4cd508a7ff655476b40ef843f82e87873374e72760f49bde61f92aa",
+      "guid": "cf19ace87b12c2741979b9582691d60d"
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/MidAirReference.prefab",
+      "size": 7574,
+      "sha256": "1bec9de0031928b4a1a0b43f886aa51f9b67391a2f8f6131c8a2f0037a216dd2",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Prefabs/MidAirReference.prefab.meta",
+      "size": 241,
+      "sha256": "eff82adaf4bfe4d7aeef61e0125de8baa14ab894ccffd10d1031fdf895d926d3",
+      "guid": "e9dc61a799fb66b4f830683886a6d761"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/BoundingBoxRenderer.cs",
+      "size": 2715,
+      "sha256": "a8bdd5fac56b653160a5664dc57806b478b048aa3fc8736a74c609ae7e524f1d",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/BoundingBoxRenderer.cs.meta",
+      "size": 297,
+      "sha256": "9bcd00d35a88af7b5ca7067fd94efc9782e80754c06976d91442a04043e3072f",
+      "guid": "b0768a105a9bd48409a689214808185f"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs",
+      "size": 9840,
+      "sha256": "a38003c9600a3b5917c00d97e549e07fce80b4d744e8c948e27e897c48b5ba84",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/DefaultInitializationErrorHandler.cs.meta",
+      "size": 274,
+      "sha256": "819a7081c364d326eab3c0a209d8766021e70126f9946e0fbb8518ddd523e6cc",
+      "guid": "c47f92041efbb4b429a4eafca855ebe3"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs",
+      "size": 2338,
+      "sha256": "68383a93f1568d6841e6d0b8a5d5a29365587de50c19b8125dc51a7596d8fc7d",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs.meta",
+      "size": 297,
+      "sha256": "05b0e5f8f510edff891923de05bfbfc891b1934aefbeb0c448141072dbb47136",
+      "guid": "fabb808b641aeac42aaabc701a5b885e"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs",
+      "size": 4665,
+      "sha256": "533a89845d32197970a32a95f9774328792a04a3cc44c71881e3fcbbd09ac059",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs.meta",
+      "size": 274,
+      "sha256": "f4bc95dae1e9d70ffa0476044c02f600a2071a481972beb5b7a9c421930a1bc4",
+      "guid": "5a917f0af64a6423093132dab321c15f"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/Internal.meta",
+      "size": 180,
+      "sha256": "b317634953c64f24572d15d72c184786434981f1d3adea549218aafb3a55d9f3",
+      "guid": "f5cecbfda7a73445eb60d7bcdface705"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/VuforiaScripts.asmdef",
+      "size": 277,
+      "sha256": "255c4e1656b9bcd830f67b898501e4e6d9d5ab48a4f2196310908cff64db0d20",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/VuforiaScripts.asmdef.meta",
+      "size": 173,
+      "sha256": "1a696c6a503a33e573a30bb4af4cbd02769194806f140b348ff4431615e1d7a8",
+      "guid": "4aa734a563557450591d3fe58a62a120"
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/Internal/RuntimeOpenSourceInitializer.cs",
+      "size": 3796,
+      "sha256": "c1e989018e9ff6225d47613bf8ce6d7bb8916e01290604964cc9e450894f6ca0",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Scripts/Internal/RuntimeOpenSourceInitializer.cs.meta",
+      "size": 254,
+      "sha256": "e1a25ba5bdbed2fa6f2799f0ca2e704d17012f4fa1c8a29308d261affbd17b50",
+      "guid": "2540246fb3ca1c34a9358b891acb61f5"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/BrightTexture.shader",
+      "size": 1197,
+      "sha256": "8ee2877f1ff3d0b5254d4dc7ba9d5876d957cb2b50b2a11b1fba88b487ddf869",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/BrightTexture.shader.meta",
+      "size": 62,
+      "sha256": "064aa146d34e87e8cda4e67210b52a31da54886a77365896f837fcfc42d28006",
+      "guid": "7e6d3c0df88f3ab458512f8282e449af"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/CameraDiffuse.shader",
+      "size": 2345,
+      "sha256": "02d856e0646011c6a83ac3142be001d1d78704d82beb106757a34bea010d977c",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/CameraDiffuse.shader.meta",
+      "size": 204,
+      "sha256": "ef50e2b4c602fd2cb61cfe0b65959021392aa21e2bcb2d4825ff14a7feca59a7",
+      "guid": "1a890b01c666b2a4dbdfe1eb6a476078"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/ClippingMask.shader",
+      "size": 1360,
+      "sha256": "ad7399052a76e1d6428625d1a9e21a55cb009e8436bf96b39534cc1c2e35586a",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/ClippingMask.shader.meta",
+      "size": 213,
+      "sha256": "e3d99ac6baecf5342838357b3a5b40245eb19500cac8fdf6a1a7767ad478b9a6",
+      "guid": "66d0d78a3000021448b598bb54a3bfdf"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/ColoredLines.shader",
+      "size": 690,
+      "sha256": "a1af92912cfbd04d3e772d72ae904e7e31ef0b1ffb63d71ff55cd516dec905a9",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/ColoredLines.shader.meta",
+      "size": 116,
+      "sha256": "6f042e1a0c42427e3e25a23cb8f943826f7d6c453b7ce317d30bc16e4604a149",
+      "guid": "c3430c603e3a4f54c86671122d3dfa1c"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/DepthContour.shader",
+      "size": 3170,
+      "sha256": "483e3e614603f53323fb6c4235405485a1a0e6fc1c9f7f0fdbca74aca3348f7a",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/DepthContour.shader.meta",
+      "size": 227,
+      "sha256": "8ee2929e7f738d59cf05ce96f6197d25c8b16755f9a642806d968eb7bfe3df06",
+      "guid": "c1ded68d068051d4f92650fcddaae5c7"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/DepthMask.shader",
+      "size": 1558,
+      "sha256": "a2efd56478e30d18729f5b70f7fc33e790989f57d23c0bbf7d5f57b37972624f",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/DepthMask.shader.meta",
+      "size": 62,
+      "sha256": "8d5f919112e2682917476a95c2ea526e0333c5b37a5b6fad8247bf03a6de0ce1",
+      "guid": "1ce7eb78425fb1540838bc9d5d95857a"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/OutlineOpaque.shader",
+      "size": 1913,
+      "sha256": "bc281608040420f066acfe9ee11827a502cbc330b4f126ce6f73a5b2ca6e2555",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/OutlineOpaque.shader.meta",
+      "size": 204,
+      "sha256": "08807b619dc796b378cbbd00e13779b346c783185191ce54b5a3364e0dbe1976",
+      "guid": "a81568144a775094bb6b92c7df9fcebe"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/Text3D.shader",
+      "size": 842,
+      "sha256": "a441c41747d48722a09b1adee392ddb0a671711423d755e5d2a856699189f510",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/Text3D.shader.meta",
+      "size": 62,
+      "sha256": "3620132626c9fc13ddfbbbc9d67022bf7773385bb21d21a4357fe2cd3fc1f47a",
+      "guid": "1291d28f0c885a84d8c9a67bc6ca0c82"
+    },
+    {
+      "path": "Assets/Vufo…452 tokens truncated…_YUVNV12_YUVNV21.cginc",
+      "size": 2137,
+      "sha256": "b9c75240177d1c3cfc59ccf79fc01bf11b5c7a89cd3c197e9e85edabb67bf52c",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/VuforiaVB_YUVNV12_YUVNV21.cginc.meta",
+      "size": 213,
+      "sha256": "becb4287efdd0599cdbf8508cd804e9a29b053aedc849efdb30c603532a916e5",
+      "guid": "43f394421858c3842a9d73b264c80b87"
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/VuforiaVideoBackground.cginc",
+      "size": 1036,
+      "sha256": "fdad89fc40d00d9b6d739aaba077c1b5a8b7236a86783eb3fce35a03c821f50e",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Shaders/VuforiaVideoBackground.cginc.meta",
+      "size": 213,
+      "sha256": "0f6a1970f4e320581201f885567abff7651da3713e904c5997beec33817f4eb8",
+      "guid": "b45a2e38fc69fd440b7fa56ebfb18dfc"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/CloudRecoTarget.png",
+      "size": 21685,
+      "sha256": "50c24b17b614066a275e7ba13ab8f9ab94420c8b001c427318b02d43f01c2198",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/CloudRecoTarget.png.meta",
+      "size": 708,
+      "sha256": "d25f94bba93649061ca4e41f7e2d46f0e2533b77b05f1c95b6bb4df0a335353b",
+      "guid": "f6153ed43853e4449924f1322300f084"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/GroundPlaneReference.png",
+      "size": 144478,
+      "sha256": "d836f3cd1678ace07dbdb5b9ec684173b85fdb01b200849c8f855f523b5c3684",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/GroundPlaneReference.png.meta",
+      "size": 1731,
+      "sha256": "0838b8ba1e5e1f3e18abd1ab2888df2f9ef2d14656b41bf24cd23d700b5613a5",
+      "guid": "5f131b079790d4251836bc73b812b53d"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/MidAirReference.png",
+      "size": 34839,
+      "sha256": "fabe0185dd0e324d6056544758a5f69ef13993d1bb8c129a348947d493c6a200",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/MidAirReference.png.meta",
+      "size": 1731,
+      "sha256": "7bac7c65fa8c31682203c797d34d21d097ac6d339e0d52ae33a23d82acdaac7f",
+      "guid": "e21dffdcc7917472c9827aa5e2387fe8"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/Reticle.png",
+      "size": 27925,
+      "sha256": "53656d0db006de9ec03018a6192358ff5c028bd9ac7cdd5bb091b9ba9eda1ce0",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/Reticle.png.meta",
+      "size": 1731,
+      "sha256": "eb3e90f56025735003861b4256960a9665820ec96d56f821387839555d8e2003",
+      "guid": "1e424f48fda62483aa0c9eec616e0cc8"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/UserDefinedTarget.png",
+      "size": 24425,
+      "sha256": "fd5f2f291da7e088489e9d940d85105bc2067457176db9e59c71a79bd1ff361f",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/UserDefinedTarget.png.meta",
+      "size": 708,
+      "sha256": "f746e15ff4be34b7f550ce034d17a7577242be8445347aab3b0a3beac23e1fc3",
+      "guid": "fb22b98929f50754ab255ba14de4fa55"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/VideoBackground.png",
+      "size": 34183,
+      "sha256": "0fcc4aee58f84928d730b1e6f27da7a67b96562a3c9866b7f6de47779c0e5cc9",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/VideoBackground.png.meta",
+      "size": 745,
+      "sha256": "b1e816a8bcfb401621f02f35e65d5abaa7f8adc6aaec440a712507dac297362d",
+      "guid": "d46decd9d3bbf0d46b31a3d4ae0f18ff"
+    },
+    {
+      "path": "Assets/Vuforia/Textures/VirtualButtonPreview.png",
+      "size": 732,
+      "sha256": "446ae73b9e94bd5a0d21185ea470378e8521f736222a929bb601da688f78318c",
+      "guid": null
+    },
+    {
+      "path": "Assets/Vuforia/Textures/VirtualButtonPreview.png.meta",
+      "size": 745,
+      "sha256": "7e86e00419d7e2121f6558a471302ca5f97de60fdfe2fd6565892655054bead0",
+      "guid": "dd8287d41aafb4b4bacd7e0ebf634a0c"
+    },
+    {
+      "path": "Assets/Editor/AlphabetModelImporter.cs.meta",
+      "size": 243,
+      "sha256": "69d92aa9ed468d2e27b8c6bda5a914b8cf5b8153b2f25c3f57f3f06cff2cd3e6",
+      "guid": "46409102b08e011429ccdeb612c515b6"
+    },
+    {
+      "path": "Assets/Editor/AndroidBuildPipeline.cs.meta",
+      "size": 243,
+      "sha256": "fd3852116ea871cdc9c3af75d803b42905a56e62922501ce0dd6c74d8b6cc09d",
+      "guid": "12684f2720f599d4c86408925d30d367"
+    },
+    {
+      "path": "Assets/Editor/ProjectValidation.cs.meta",
+      "size": 243,
+      "sha256": "f3caae504dadd4c8048ed4ced0f5aff5757bb3ed20c32d946f9254fa6baacbb4",
+      "guid": "2efe5f346d04e4e47bdf4707a6336bc4"
+    },
+    {
+      "path": "Assets/Editor/Vuforia.meta",
+      "size": 180,
+      "sha256": "eb358a3bb01a8c6a7a0088cbe80dcb773c31c78c59281be4b60159651d6af432",
+      "guid": "0a1ef0e14689c1d4fa51831f0b4bb83b"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures.meta",
+      "size": 180,
+      "sha256": "9a536d83c405c7a3ffa4112edd6aad4a89e0b8e0f81a8c5a1f90f1eed4d19d3f",
+      "guid": "e89a2cbb61a30a945a89fcf48e28e2a2"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto.meta",
+      "size": 180,
+      "sha256": "c6d4a916a1f222079dad42d6b5c2d7c906f8bcd5c5e3e0c86e65d0f029fa45d5",
+      "guid": "90f329719c3df2d48a759bf1c373e373"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA.meta",
+      "size": 180,
+      "sha256": "7de7d10e752366d1ac968a1ff6716721203cd98b384a4fb2c924fbbd6f54ddff",
+      "guid": "390f326ba514edb4e9a9989f9810691a"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/A_scaled.jpg",
+      "size": 91727,
+      "sha256": "8dbc852e187e03773bcfdcb397007b7d8a2c21d75795eec211333ad5425e5ec8",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/A_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "3cb9979f400f902743c86a60f7908bfeba33cf5341abe916c7997c9248b41974",
+      "guid": "195be3edc3d2458880a070acaf9ab61c"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/B_scaled.jpg",
+      "size": 83110,
+      "sha256": "fd009eb28439a6869ee903146aa4275ca992fc996de8d2ce6f675ec88836db63",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/B_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "da6cfe4e4dd2e63b6fcdac83c1378bf7443adae532a1366cfefdbcfd2829e47b",
+      "guid": "a05213d501c14afda993f1d82cdbf15e"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/C_scaled.jpg",
+      "size": 87773,
+      "sha256": "e3d3d4e3f0b88ad78ee95ce70652fda8ebcb6ee752622d385a12bfb191b6be51",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/C_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "a8d80259121b457135e8c8abaef0e0ffe99566a607bdba1ce3c9ce6c2eae6536",
+      "guid": "e73a9fff2f544eda8e1780803088d652"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/D_scaled.jpg",
+      "size": 90970,
+      "sha256": "c6ac1c7c1ecd5103ec0212ff9501d209ca6a34ea1e8f9bd4d34f5310e90ad10b",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/D_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "55261a7d168de48c8e62dd2066c7fefae123057ca971c1c0cd00ab9dc7ea9048",
+      "guid": "f74ae3db32f6405aa175b3d5a732934b"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/E_scaled.jpg",
+      "size": 90588,
+      "sha256": "5442963b1e6e9d295985e6b5df031d441e83d2df83aa209ec9fcc911008da9a8",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/E_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "dcb84ad5afc953b6125fa266d9f3375cf8389fd9b8c08defbaf403ea0382bfc1",
+      "guid": "e72e4296986446249578d6d903160f98"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/F_scaled.jpg",
+      "size": 88016,
+      "sha256": "7ecc01dd85f36c3c34bc163e4bc5a37610c1099ad06bfc348d6bc53f769de012",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/F_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "f7a39eac1c8e2e3c0a7255af171fc7fea4affd3091fe2cd0aeebff6cdcba9b55",
+      "guid": "e4165758d80e4a5f97f41e4b3485bcfa"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/G_scaled.jpg",
+      "size": 89898,
+      "sha256": "52ee0ab5ecb18064e0b9951a160cdb3f35460ba436a70044d81211ad7ff5c3df",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/G_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "fba5c4f57d3a6d2328787efa62cc598e7f52b4fc967724f2bb1728b684e12965",
+      "guid": "1abf31aaa7584e619fef3f80cda83f1a"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/H_scaled.jpg",
+      "size": 90326,
+      "sha256": "b975ca1ffa839848af7117bd2e7e5a18a171baff08fe8b94d94131755d7cc13e",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/H_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "7417016eb6b1fe1af221ee437fc08e94cdfd8ade2ecc947eeedecbf5f4a74b3c",
+      "guid": "fefec2644d854a1d8d0489ff57583c4f"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/I_scaled.jpg",
+      "size": 85801,
+      "sha256": "caf3b41884f09b66fe905817680752829d6f265fdcaa083b8015783263cc1070",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/I_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "c5fb100d963eafa61fff75b3a24445e15a92205cecf19f7ef98172a29091f83c",
+      "guid": "4e3bb7a1381a4852b895b73fc4ad3452"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/J_scaled.jpg",
+      "size": 83735,
+      "sha256": "2934c25335dd0d8f8132a8623cbc911010f675ae356bfe231a5c836ace502945",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/J_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "a1f9c89e8f9fe7cebd0e10157c14ef3d3fc7af09a630cfdcc2aee39061401517",
+      "guid": "f2965e122a964206b06ccba0f57e6a85"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/K_scaled.jpg",
+      "size": 87251,
+      "sha256": "c82498cdf9b66d7f4a41588482d54c93176a22f4a028f8d07ea868815b4a630f",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/K_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "2cacb0a26896c9835374e116f620f7e066d2b7d54d5c788af4985891faaf5e51",
+      "guid": "ce0ffe518d984138aecb9d3b655f4c20"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/L_scaled.jpg",
+      "size": 81425,
+      "sha256": "b3bcedabc0c321d15b23449a79d48cb56d09206189f301358ab3f4197edf08df",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/L_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "864dbb442ed257fac6be7acb23d2249d8c1b76f03ecb403fedd79ae65faf3669",
+      "guid": "d76b9967412b44da9f0d123e6c8d92f8"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/M_scaled.jpg",
+      "size": 94211,
+      "sha256": "d619df0aeb87759b9e32290f8a640395a561aafece2594b8cf5a48d423368f8c",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/M_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "c56fd1140c8f7c749c6ea8fb2b54f98e9af8e9f693401b49471518444a9e0e18",
+      "guid": "f08d853e50a749d7a4b839e9ac46c7aa"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/N_scaled.jpg",
+      "size": 89648,
+      "sha256": "90c1512ee8e47139fd390b5e5c537544f585717fe18d9cf4a917b4d902573877",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/N_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "84edfddb5422129077362008b8510bbcdaee7ec4c726d7e1bd518775103489cd",
+      "guid": "07b05cc7aa3a4d2eb8fa5e7f9e415ba5"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/O_scaled.jpg",
+      "size": 87001,
+      "sha256": "860158333652791b74a94f5ffe9c7bab2d59c5cfd2818443c97e00adceea8d34",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/O_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "2a7fe284f8c58c32e3ca780f81ce1682983c12df6291d84db9ca32e332cb0aa5",
+      "guid": "8bc3d34a94294ee785418cc3f5c11699"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/P_scaled.jpg",
+      "size": 87283,
+      "sha256": "b0c131cf370e2395b3823043456ece120dea5d1ab80a26ae6153aa0725bdec51",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/P_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "81de67742ee60c9669ee5b7e6d67e5f55a0cd964dd19004956bbb2bab25d7a5e",
+      "guid": "fa123f2633e84f8fb45350fd06062cd1"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/Q_scaled.jpg",
+      "size": 85454,
+      "sha256": "6024b13f37b0c6c42fd7d50a525b3330d62e550beeb1c966a409c38cc989cf12",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/Q_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "3d50054a8d579ce7f14252281b47ad9b1b3f4b9e82bfafc1617cb2ef7122f794",
+      "guid": "779fa57ff3cd4015b59bf3289df5ec04"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/R_scaled.jpg",
+      "size": 89784,
+      "sha256": "2dbf9a276119db4fabca986537a633cd5e1ec4c99198228daef46a04c032d2ff",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/R_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "c8b4ad483021f4c6f224b9fa24b3af0678459498062cc57e6d224264f72f3b5e",
+      "guid": "03c5b778bb20490db2e62f5042c225ac"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/S_scaled.jpg",
+      "size": 89831,
+      "sha256": "1b17c475b10e916cac153512cd18ce2fdf1fb978268f5e32ebaba16b63d4d9e1",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/S_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "22a82ce34235eb0a4e85feffb27748c5f34c71a030e9147099a1ca319a258cff",
+      "guid": "e0abbf6eb64941ecb8ea88bf3212bf1f"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/T_scaled.jpg",
+      "size": 84646,
+      "sha256": "079322585cef52e2224f2cdde8a50d43f41143fe84d7f3d9f179917484067457",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/T_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "e0b6b9dbe0cd971d4fc268ab5452962a295d27f569f56e603b0c85a0cf755b3d",
+      "guid": "d98f3093bce4428694d06dd44e78891f"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/U_scaled.jpg",
+      "size": 85939,
+      "sha256": "27fc6c3a8710826779198e38485e8dd50e7222f4de7751e0b8c726a691deb9b1",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/U_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "e66b5c8e5b41ae0c046e29a0ed6dc665916b5f67423a366d5b8efcd648023483",
+      "guid": "cfe8ee4ee5e843ca9fe3d18492451716"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/V_scaled.jpg",
+      "size": 91283,
+      "sha256": "83d2052f03642f41fa8a70121912f8019ca36ce948eff2e6c808553762a01e13",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/V_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "fd625e64d686fbf43fbeeeedeed1424390ad3aba97e8f2bb1dab1ce80075f630",
+      "guid": "39d46e3a942543ec99143282f0585ab0"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/W_scaled.jpg",
+      "size": 91155,
+      "sha256": "612635069c186b54ba8a4b5f1a058b06908fe40f243afc9390fce54c1872fd82",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/W_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "3145c5092b163c9bf4334a2e2cfdeb33987e908c106ace913245d646a8141a30",
+      "guid": "abe42ca3863e481ba2f9236bd629e333"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/X_scaled.jpg",
+      "size": 89810,
+      "sha256": "9b6e1eaeb0b2de9a405abd6e1ece287d09ac97b30dbc6f98fa19316b5955b5eb",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/X_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "ddd11363328183e867a306fec42edb49ced36a89dbf76b9f40edf32d1ef6ed03",
+      "guid": "fcea7e55654e4eabbbadc23b8ec624f4"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/Y_scaled.jpg",
+      "size": 84214,
+      "sha256": "9a316d16c051f321b468d34f6bf715a7b9ee351356e18f69c691cfba6a65d3ef",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/Y_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "8d210c1146633b8d8e2a8165852dda0943111e8f39c0015022528cb39a8a6bba",
+      "guid": "912683f1824a4f8ca52ef1376fa38fe5"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/Z_scaled.jpg",
+      "size": 85469,
+      "sha256": "bc210b68295c32fc3a5baff0543ad2f6ef0856bfe09c67486c76220e5838682e",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/Alfabeto/Z_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "ac3bec5528b471e4c17e7f78665d04bad7b13187efd8c3bd7b62f4a3dcddff1e",
+      "guid": "c590b97a8b394de6b5b7fc5ef2f67e86"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA/AVuforia_scaled.jpg",
+      "size": 42650,
+      "sha256": "daee42858d711b744e9052d193ae6b9a1116af04ed49fbe7a16002502bacb2df",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA/AVuforia_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "c2faeaaffb84bdc88af450b40b3bcb510792bbbe3daeef06b05149cf886a03fe",
+      "guid": "be84ca21680a4e9792a59c3bc394acba"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA/BVuforia_scaled.jpg",
+      "size": 39819,
+      "sha256": "7fa7d51d849fe4d873742b9629114693ac045e02eb09f7b7c9d501b1c4ad3436",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA/BVuforia_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "d2b01ba9f0a3f80c086eda1329c66e328b2bbcf0c79519bb95a757b220af53b0",
+      "guid": "b950cf0be1774103a6bd1af07437e851"
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA/CVuforia_scaled.jpg",
+      "size": 41441,
+      "sha256": "f75ef35e33a5e7aee401a8808ab08f4f55cd4a1ddd72842dcb7c20cdfa991644",
+      "guid": null
+    },
+    {
+      "path": "Assets/Editor/Vuforia/ImageTargetTextures/RealidadeA/CVuforia_scaled.jpg.meta",
+      "size": 2023,
+      "sha256": "4ad7c5340afca3e9af3c765b8d7ae05b0efa06b591373df1cccd68c946c4adac",
+      "guid": "5c722b923a134c7a8c140a5225fd4bb9"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "size": 1993,
+      "sha256": "e483f97364fc7e0475ae37c6fbb352c1a525b53dcbf8114afb29d600b0216141",
+      "guid": null
+    },
+    {
+      "path": "Packages/packages-lock.json",
+      "size": 9624,
+      "sha256": "855adb16b9c780a68fefcf923d1af85c4cb4efe7005d1c355d17b084edd69e2a",
+      "guid": null
+    }
+  ]
+}
