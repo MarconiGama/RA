@@ -100,6 +100,7 @@ def clean_mesh(mesh):
     bm = bmesh.new()
     bm.from_mesh(mesh)
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.00001)
+    bmesh.ops.dissolve_degenerate(bm, dist=0.0000001, edges=list(bm.edges))
     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     loose = [vert for vert in bm.verts if not vert.link_edges and not vert.link_faces]
     if loose:
@@ -202,6 +203,10 @@ def generate_letter(letter, output_file, overwrite):
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     bpy.ops.wm.save_as_mainfile(filepath=output_file, check_existing=False, compress=True)
+    for suffix in ("1", "2"):
+        backup = output_file + suffix
+        if os.path.isfile(backup):
+            os.remove(backup)
 
     return {
         "letter": letter,
@@ -238,6 +243,7 @@ def write_report(path, letters, results):
 def main():
     if bpy.app.version[:2] != EXPECTED_BLENDER:
         raise RuntimeError("Blender 2.93 obrigatório; encontrado " + bpy.app.version_string)
+    bpy.context.preferences.filepaths.save_version = 0
     args = script_args()
     letters = parse_letters(args.letters)
     output_dir = resolve_path(args.output_dir)
