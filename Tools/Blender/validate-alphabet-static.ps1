@@ -12,7 +12,9 @@ $letters = [char[]](65..90)
 foreach ($letter in $letters) {
     foreach ($path in @(
         "SourceAssets/Blender/Alphabet/blends/RA_Letter_$letter.blend",
-        "Assets/Models/Alphabet/FBX/RA_Letter_$letter.fbx"
+        "Assets/Models/Alphabet/FBX/RA_Letter_$letter.fbx",
+        "Assets/Models/Alphabet/Materials/RA_Mat_$letter.mat",
+        "Assets/Models/Alphabet/Prefabs/RA_Letter_$letter.prefab"
     )) {
         if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
             $errors.Add("Ausente: $path")
@@ -51,6 +53,15 @@ if (($targets | Sort-Object -Unique).Count -ne 26) {
 if (($ids | Sort-Object -Unique).Count -ne 26) {
     $errors.Add("IDs duplicados no JSON")
 }
+foreach ($item in $content.items) {
+    $expected = "Models/Alphabet/Prefabs/RA_Letter_$($item.target)"
+    if ($item.prefabResource -ne $expected) {
+        $errors.Add("Prefab incorreto para target $($item.target): $($item.prefabResource)")
+    }
+    elseif (-not (Test-Path -LiteralPath "Assets/$expected.prefab" -PathType Leaf)) {
+        $errors.Add("Prefab referenciado ausente: Assets/$expected.prefab")
+    }
+}
 
 $forbidden = @(Get-ChildItem -Path . -Recurse -Force -File | Where-Object {
     $_.FullName -notmatch "[\\/]\.git[\\/]" -and (
@@ -79,4 +90,3 @@ if ($errors.Count) {
 }
 Write-Host "Validação estática aprovada: 26 fontes, 26 FBX, conteúdo e higiene do repositório."
 exit 0
-
