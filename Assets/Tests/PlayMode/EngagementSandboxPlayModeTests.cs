@@ -159,8 +159,11 @@ public sealed class EngagementSandboxPlayModeTests
 
     private IEnumerator WaitForState(LearningExperienceState expected)
     {
-        var frames = 0;
-        while (controller.State != expected && frames++ < 240) yield return null;
+        var timeout = Time.realtimeSinceStartup + 3f;
+        while (controller.State != expected && Time.realtimeSinceStartup < timeout)
+        {
+            yield return null;
+        }
         Assert.AreEqual(expected, controller.State);
     }
 }

@@ -60,6 +60,26 @@ public static class SceneRouteValidation
         ValidateProfileOrThrow("ENGAGEMENT_PILOT", GetEngagementPilotScenes());
     }
 
+    public static void ConfigureEngagementPilotTestBuildSettings()
+    {
+        EditorBuildSettings.scenes = new[]
+        {
+            new EditorBuildSettingsScene(EngagementPilotMenuScene, true),
+            new EditorBuildSettingsScene(EngagementPilotDestinationScene, true)
+        };
+        Debug.Log("RA Scene Route: build settings temporários configurados para o teste piloto.");
+    }
+
+    public static void RestoreBaselineEditorBuildSettings()
+    {
+        EditorBuildSettings.scenes = new[]
+        {
+            new EditorBuildSettingsScene(ProjectValidation.MenuScene, true),
+            new EditorBuildSettingsScene(ProjectValidation.ArScene, true)
+        };
+        Debug.Log("RA Scene Route: build settings baseline restaurados.");
+    }
+
     public static void ValidateRouteDefinitionOrThrow(
         string sourceScenePath,
         string requestedScene,
