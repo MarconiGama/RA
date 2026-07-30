@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import base64
 import hashlib
 import importlib.util
 import string
@@ -137,6 +138,22 @@ class TargetCatalogTests(unittest.TestCase):
                         "Imprimir em tamanho real / escala 100%.",
                         page.extract_text(),
                     )
+
+            one_up_reader = PdfReader(str(one_up))
+            for page, target in zip(one_up_reader.pages, self.targets):
+                xobjects = page["/Resources"]["/XObject"]
+                embedded = [
+                    ref.get_object()
+                    for ref in xobjects.values()
+                    if ref.get_object().get("/Subtype") == "/Image"
+                ]
+                self.assertEqual(1, len(embedded))
+                self.assertEqual(
+                    ["/ASCII85Decode", "/DCTDecode"],
+                    [str(item) for item in embedded[0]["/Filter"]],
+                )
+                jpeg_bytes = base64.a85decode(embedded[0]._data, adobe=True)
+                self.assertEqual(target.path.read_bytes(), jpeg_bytes)
 
             with Image.open(contact_png) as image:
                 self.assertEqual((1200, 1620), image.size)

@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import math
 import string
 import sys
 from dataclasses import asdict, dataclass
@@ -14,9 +13,12 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageStat
+import reportlab
 from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
 
@@ -26,6 +28,11 @@ TWO_UP_WIDTH_MM = 165.0
 MIN_MARGIN_MM = 12.0
 TWO_UP_GAP_MM = 18.0
 WARNING = "Imprimir em tamanho real / escala 100%. Não usar Ajustar à página."
+REPORTLAB_FONTS = Path(reportlab.__file__).resolve().parent / "fonts"
+NORMAL_FONT = "TargetCatalogSans"
+BOLD_FONT = "TargetCatalogSansBold"
+pdfmetrics.registerFont(TTFont(NORMAL_FONT, str(REPORTLAB_FONTS / "Vera.ttf")))
+pdfmetrics.registerFont(TTFont(BOLD_FONT, str(REPORTLAB_FONTS / "VeraBd.ttf")))
 
 
 @dataclass(frozen=True)
@@ -250,7 +257,7 @@ def draw_identification(
 ) -> None:
     pdf.saveState()
     pdf.setFillColor(HexColor("#111111"))
-    pdf.setFont("Helvetica-Bold", 11)
+    pdf.setFont(BOLD_FONT, 11)
     pdf.drawString(x, baseline, f"Target {target.letter}")
     printed_height_mm = image_width / target.pixel_aspect / mm
     detail = (
@@ -258,7 +265,7 @@ def draw_identification(
         f"XML: {target.xml_width:.6f} x {target.xml_height:.6f}"
     )
     pdf.setFillColor(HexColor("#444444"))
-    pdf.setFont("Helvetica", 6.5)
+    pdf.setFont(NORMAL_FONT, 6.5)
     pdf.drawRightString(x + image_width, baseline, detail)
     pdf.restoreState()
 
@@ -267,9 +274,9 @@ def draw_footer(pdf: canvas.Canvas, page_number: int, page_total: int) -> None:
     page_width, _ = A4
     pdf.saveState()
     pdf.setFillColor(HexColor("#222222"))
-    pdf.setFont("Helvetica-Bold", 7.2)
+    pdf.setFont(BOLD_FONT, 7.2)
     pdf.drawString(MIN_MARGIN_MM * mm, 7.5 * mm, WARNING)
-    pdf.setFont("Helvetica", 7.2)
+    pdf.setFont(NORMAL_FONT, 7.2)
     pdf.drawRightString(
         page_width - MIN_MARGIN_MM * mm,
         7.5 * mm,
@@ -346,10 +353,10 @@ def build_contact_pdf(targets: list[Target], output: Path) -> None:
     cell_height = grid_height / rows
 
     pdf.setFillColor(HexColor("#111111"))
-    pdf.setFont("Helvetica-Bold", 16)
+    pdf.setFont(BOLD_FONT, 16)
     pdf.drawString(margin, page_height - margin - 5.0 * mm, "Contato A-Z - conferência visual")
     pdf.setFillColor(HexColor("#555555"))
-    pdf.setFont("Helvetica", 8)
+    pdf.setFont(NORMAL_FONT, 8)
     pdf.drawString(
         margin,
         page_height - margin - 11.0 * mm,
@@ -372,7 +379,7 @@ def build_contact_pdf(targets: list[Target], output: Path) -> None:
         x = cell_x + (cell_width - image_width) / 2
         y = cell_top - 5.0 * mm - image_height
         pdf.setFillColor(HexColor("#111111"))
-        pdf.setFont("Helvetica-Bold", 8)
+        pdf.setFont(BOLD_FONT, 8)
         pdf.drawCentredString(cell_x + cell_width / 2, cell_top - 3.0 * mm, target.letter)
         pdf.drawImage(
             str(target.path),
@@ -385,9 +392,9 @@ def build_contact_pdf(targets: list[Target], output: Path) -> None:
         )
 
     pdf.setFillColor(HexColor("#333333"))
-    pdf.setFont("Helvetica-Bold", 7.5)
+    pdf.setFont(BOLD_FONT, 7.5)
     pdf.drawString(margin, 8.0 * mm, "NÃO USAR ESTA PÁGINA PARA TRACKING.")
-    pdf.setFont("Helvetica", 7.5)
+    pdf.setFont(NORMAL_FONT, 7.5)
     pdf.drawRightString(page_width - margin, 8.0 * mm, "Página 1/1")
     pdf.showPage()
     pdf.save()
@@ -403,8 +410,8 @@ def build_contact_sheet_png(targets: list[Target], output: Path) -> None:
         "#F2F3F5",
     )
     draw = ImageDraw.Draw(sheet)
-    font = ImageFont.load_default(size=20)
-    small_font = ImageFont.load_default(size=14)
+    font = ImageFont.truetype(str(REPORTLAB_FONTS / "VeraBd.ttf"), 20)
+    small_font = ImageFont.truetype(str(REPORTLAB_FONTS / "Vera.ttf"), 14)
     draw.text((24, 16), "Targets A-Z - contact sheet de validação", fill="#111111", font=font)
     draw.text(
         (24, 46),
@@ -513,4 +520,3 @@ if __name__ == "__main__":
     except Exception as error:
         print(f"ERROR={error}", file=sys.stderr)
         raise SystemExit(1)
-
