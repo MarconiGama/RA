@@ -42,3 +42,9 @@ flowchart LR
 ## A–Z scaling
 
 All letters retain their existing IDs, target names and basic prefab resources. A schema-2 item may opt into the enriched controller through simple fields; incomplete B–Z items continue through a basic letter fallback. New letter experiences should add content configuration and assets without branching the core state machine.
+
+## Local telemetry retention and export
+
+Engagement telemetry is stored only in local `PlayerPrefs` as newline-delimited JSON. The queue is capped at 200 records; when full, the oldest record is discarded. Records contain an event ID, event type, content ID, UTC timestamp, duration, sensory profile and Reduced Motion flag. The `profileId` argument is deliberately not serialized, and no name, media, contact detail, location, advertising identifier or biometric field exists in the payload.
+
+The sandbox exposes an explicit local export through `LocalTelemetryService.Export()`. `ExportAndClear()` returns the same payload and deletes the retained queue. Sprint E1 does not transmit, upload or automatically share telemetry; retention lasts until the queue rolls over, the export-and-clear operation runs, application data is cleared or the app is removed.

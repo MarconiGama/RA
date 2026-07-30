@@ -292,6 +292,7 @@ public static class EngagementSceneBuilder
         var cameraObject = new GameObject("Main Camera");
         cameraObject.tag = "MainCamera";
         var camera = cameraObject.AddComponent<Camera>();
+        cameraObject.AddComponent<AudioListener>();
         camera.clearFlags = CameraClearFlags.SolidColor;
         camera.backgroundColor = new Color(0.12f, 0.20f, 0.24f);
         cameraObject.transform.position = new Vector3(0f, 0.7f, -6f);
