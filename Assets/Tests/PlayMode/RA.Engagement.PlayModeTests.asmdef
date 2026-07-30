@@ -1,14 +1,12 @@
 {
-  "name": "RA.Alphabet.EditModeTests",
+  "name": "RA.Engagement.PlayModeTests",
   "references": [
     "RA.Runtime"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"
   ],
-  "includePlatforms": [
-    "Editor"
-  ],
+  "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": false,

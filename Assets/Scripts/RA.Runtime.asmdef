@@ -1,14 +1,9 @@
 {
-  "name": "RA.Alphabet.EditModeTests",
+  "name": "RA.Runtime",
   "references": [
-    "RA.Runtime"
+    "Unity.ugui"
   ],
-  "optionalUnityReferences": [
-    "TestAssemblies"
-  ],
-  "includePlatforms": [
-    "Editor"
-  ],
+  "includePlatforms": [],
   "excludePlatforms": [],
   "allowUnsafeCode": false,
   "overrideReferences": false,
