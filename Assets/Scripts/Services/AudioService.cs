@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public interface IAudioService
@@ -9,6 +10,7 @@ public interface IAudioService
 public sealed class AudioService : IAudioService
 {
     private readonly AudioSource source;
+    private readonly Dictionary<string, AudioClip> cache = new Dictionary<string, AudioClip>();
 
     public AudioService(AudioSource source)
     {
@@ -22,7 +24,13 @@ public sealed class AudioService : IAudioService
             return false;
         }
 
-        var clip = Resources.Load<AudioClip>(resourcePath);
+        AudioClip clip;
+        if (!cache.TryGetValue(resourcePath, out clip))
+        {
+            clip = Resources.Load<AudioClip>(resourcePath);
+            cache[resourcePath] = clip;
+        }
+
         if (clip == null)
         {
             Debug.LogWarning("Áudio não encontrado em Resources/" + resourcePath);
