@@ -67,10 +67,11 @@ public static class EngagementModelPipeline
         importer.importCameras = false;
         importer.importLights = false;
         importer.importBlendShapes = false;
-        importer.importMaterials = false;
+        importer.materialImportMode = ModelImporterMaterialImportMode.None;
         importer.isReadable = false;
         importer.meshCompression = ModelImporterMeshCompression.Medium;
-        importer.optimizeMesh = true;
+        importer.optimizeMeshPolygons = true;
+        importer.optimizeMeshVertices = true;
         importer.SaveAndReimport();
     }
 

@@ -7,6 +7,8 @@ using UnityEngine;
 public static class AndroidBuildPipeline
 {
     private const string DevelopmentOutput = "Builds/Android/RealidadeA-development.apk";
+    private const string EngagementPilotOutput = "Builds/Android/RealidadeA-engagement-pilot.apk";
+    private const string EngagementPilotScene = "Assets/Scenes/SampleScene_EngagementPilot.unity";
     private const string ProductionOutput = "Builds/Android/RealidadeA-production.aab";
     private const string DefaultBundleVersion = "0.2.0";
     private const int DefaultVersionCode = 200;
@@ -17,6 +19,20 @@ public static class AndroidBuildPipeline
         BuildAndroid(DevelopmentOutput, false, true);
     }
 
+    [MenuItem("RA/Build/Engagement Pilot APK")]
+    public static void BuildEngagementPilotApk()
+    {
+        if (!File.Exists(EngagementPilotScene))
+        {
+            throw new FileNotFoundException("Cena piloto de engagement ausente.", EngagementPilotScene);
+        }
+        BuildAndroid(
+            EngagementPilotOutput,
+            false,
+            true,
+            new[] { ProjectValidation.MenuScene, EngagementPilotScene });
+    }
+
     [MenuItem("RA/Build/Production AAB")]
     public static void BuildProductionAab()
     {
@@ -25,7 +41,21 @@ public static class AndroidBuildPipeline
 
     private static void BuildAndroid(string defaultOutput, bool appBundle, bool developmentBuild)
     {
+        BuildAndroid(defaultOutput, appBundle, developmentBuild, ProjectValidation.GetRequiredScenes());
+    }
+
+    private static void BuildAndroid(
+        string defaultOutput,
+        bool appBundle,
+        bool developmentBuild,
+        string[] scenes)
+    {
         ProjectValidation.ValidateOrThrow();
+
+        if (scenes == null || scenes.Length == 0)
+        {
+            throw new InvalidOperationException("O build Android precisa de ao menos uma cena.");
+        }
 
         var outputPath = GetCommandLineArgument("-customBuildPath");
         if (string.IsNullOrWhiteSpace(outputPath))
@@ -77,7 +107,7 @@ public static class AndroidBuildPipeline
 
             var buildPlayerOptions = new BuildPlayerOptions
             {
-                scenes = ProjectValidation.GetRequiredScenes(),
+                scenes = scenes,
                 locationPathName = outputPath,
                 target = BuildTarget.Android,
                 options = buildOptions
