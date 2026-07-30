@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using UnityEditor;
 using UnityEditor.Events;
@@ -10,6 +11,7 @@ using UnityEngine.UI;
 public static class EngagementSceneBuilder
 {
     public const string SandboxScene = "Assets/Scenes/EngagementSandbox.unity";
+    public const string PilotScene = "Assets/Scenes/SampleScene_EngagementPilot.unity";
 
     [MenuItem("RA/Engagement/Build Sandbox")]
     public static void BuildSandbox()
@@ -44,6 +46,68 @@ public static class EngagementSceneBuilder
         EditorSceneManager.SaveScene(scene, SandboxScene);
         AssetDatabase.SaveAssets();
         Debug.Log("RA Engagement: sandbox sem Vuforia gerada em " + SandboxScene);
+    }
+
+    [MenuItem("RA/Engagement/Build Vuforia Pilot")]
+    public static void BuildPilot()
+    {
+        if (!File.Exists("Assets/Scenes/SampleScene.unity"))
+        {
+            throw new FileNotFoundException("SampleScene original ausente.");
+        }
+        if (AssetDatabase.LoadAssetAtPath<SceneAsset>(PilotScene) != null)
+        {
+            AssetDatabase.DeleteAsset(PilotScene);
+        }
+        if (!AssetDatabase.CopyAsset("Assets/Scenes/SampleScene.unity", PilotScene))
+        {
+            throw new IOException("Falha ao duplicar SampleScene para o piloto.");
+        }
+        AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
+        var scene = EditorSceneManager.OpenScene(PilotScene, OpenSceneMode.Single);
+        var targets = UnityEngine.Object.FindObjectsOfType<Vuforia.TrackableBehaviour>();
+        Vuforia.TrackableBehaviour targetA = null;
+        for (var index = 0; index < targets.Length; index++)
+        {
+            if (string.Equals(targets[index].TrackableName, "A", System.StringComparison.Ordinal))
+            {
+                if (targetA != null) throw new InvalidOperationException("Mais de um target A encontrado na cena piloto.");
+                targetA = targets[index];
+            }
+        }
+        if (targetA == null) throw new InvalidOperationException("Target A não encontrado na SampleScene copiada.");
+
+        var disabledLegacyName = DisableLegacyVisual(targetA.transform);
+        targetA.gameObject.AddComponent<LegacyVuforiaTargetAdapter>();
+        var experience = CreateExperienceRoot(true);
+        experience.transform.SetParent(targetA.transform, false);
+        experience.transform.localPosition = Vector3.zero;
+        experience.transform.localRotation = Quaternion.identity;
+        experience.transform.localScale = Vector3.one * 0.22f;
+
+        var canvas = CreateCanvas("EngagementPilotCanvas");
+        var safeArea = CreateRect("SafeArea", canvas.transform, Vector2.zero, Vector2.one);
+        var hud = CreateHud(safeArea);
+        var subtitles = CreateSubtitlePresenter(safeArea);
+        var step = CreateStepIndicator(safeArea);
+        ConfigureExperience(experience, hud, subtitles, step);
+
+        var marker = experience.gameObject.AddComponent<PilotIntegrationMarker>();
+        marker.integratedTarget = "A";
+        marker.disabledLegacyObjectName = disabledLegacyName;
+        marker.originalTransformPreserved = true;
+        marker.originalObjectDeleted = false;
+
+        var adapters = UnityEngine.Object.FindObjectsOfType<LegacyVuforiaTargetAdapter>();
+        if (adapters.Length != 1 || adapters[0].TargetName != "A")
+        {
+            throw new InvalidOperationException("A cena piloto deve conter exatamente um adaptador, para o target A.");
+        }
+
+        EditorSceneManager.MarkSceneDirty(scene);
+        EditorSceneManager.SaveScene(scene, PilotScene);
+        AssetDatabase.SaveAssets();
+        Debug.Log("RA Engagement: piloto Vuforia A gerado; objeto legado desativado: " + disabledLegacyName);
     }
 
     private static LearningExperienceController CreateExperienceRoot(bool pilot)
@@ -173,19 +237,39 @@ public static class EngagementSceneBuilder
 
     private static void WireSimulatorButtons(Transform parent, EngagementSandboxController sandbox)
     {
-        var labels = new[] { "TargetFound A", "TargetLost A", "Toque", "Replay", "Repetir", "Sair", "Exportar local" };
+        var labels = new[]
+        {
+            "TargetFound A", "TargetLost A", "Toque", "Replay", "Repetir",
+            "Alternar perfil", "Reduced Motion", "Sair", "Exportar local"
+        };
         for (var index = 0; index < labels.Length; index++)
         {
-            var yMax = 0.64f - index * 0.075f;
-            var button = CreateButton("Sandbox_" + index, parent, labels[index], new Vector2(0.06f, yMax - 0.065f), new Vector2(0.94f, yMax));
+            var yMax = 0.64f - index * 0.062f;
+            var button = CreateButton("Sandbox_" + index, parent, labels[index], new Vector2(0.06f, yMax - 0.054f), new Vector2(0.94f, yMax));
             if (index == 0) UnityEventTools.AddPersistentListener(button.onClick, sandbox.SimulateTargetFound);
             else if (index == 1) UnityEventTools.AddPersistentListener(button.onClick, sandbox.SimulateTargetLost);
             else if (index == 2) UnityEventTools.AddPersistentListener(button.onClick, sandbox.TriggerTap);
             else if (index == 3) UnityEventTools.AddPersistentListener(button.onClick, sandbox.ReplayNarration);
             else if (index == 4) UnityEventTools.AddPersistentListener(button.onClick, sandbox.RepeatExperience);
-            else if (index == 5) UnityEventTools.AddPersistentListener(button.onClick, sandbox.ExitExperience);
+            else if (index == 5) UnityEventTools.AddPersistentListener(button.onClick, sandbox.CycleSensoryProfile);
+            else if (index == 6) UnityEventTools.AddPersistentListener(button.onClick, sandbox.ToggleReducedMotion);
+            else if (index == 7) UnityEventTools.AddPersistentListener(button.onClick, sandbox.ExitExperience);
             else UnityEventTools.AddPersistentListener(button.onClick, sandbox.ExportTelemetry);
         }
+    }
+
+    private static string DisableLegacyVisual(Transform target)
+    {
+        for (var index = 0; index < target.childCount; index++)
+        {
+            var child = target.GetChild(index);
+            if (child.GetComponentInChildren<Renderer>(true) != null)
+            {
+                child.gameObject.SetActive(false);
+                return child.name;
+            }
+        }
+        throw new InvalidOperationException("Objeto visual legado do target A não foi encontrado; integração interrompida.");
     }
 
     private static void ConfigureSandbox(

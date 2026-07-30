@@ -63,6 +63,12 @@ public sealed class EngagementSandboxController : MonoBehaviour
         if (sensoryPanel != null) sensoryPanel.Refresh();
     }
 
+    public void CycleSensoryProfile()
+    {
+        var next = ((int)EngagementRuntimeServices.Sensory.Current.profile + 1) % 3;
+        SetSensoryProfile(next);
+    }
+
     public void SetReducedMotion(bool enabled)
     {
         EngagementRuntimeServices.Sensory.SetReducedMotion(enabled);
@@ -74,6 +80,11 @@ public sealed class EngagementSandboxController : MonoBehaviour
                 EngagementRuntimeServices.Sensory.Current);
         }
         if (sensoryPanel != null) sensoryPanel.Refresh();
+    }
+
+    public void ToggleReducedMotion()
+    {
+        SetReducedMotion(!EngagementRuntimeServices.Sensory.Current.reducedMotion);
     }
 
     public void ExportTelemetry()
