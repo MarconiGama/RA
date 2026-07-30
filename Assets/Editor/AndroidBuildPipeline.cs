@@ -8,6 +8,8 @@ public static class AndroidBuildPipeline
 {
     private const string DevelopmentOutput = "Builds/Android/RealidadeA-development.apk";
     private const string EngagementPilotOutput = "Builds/Android/RealidadeA-engagement-pilot.apk";
+    private const string EngagementPilotQaOutput = "Builds/Android/RealidadeA-engagement-pilot-e1.1.apk";
+    private const string EngagementPilotMenuScene = "Assets/Scenes/Menu_EngagementPilot.unity";
     private const string EngagementPilotScene = "Assets/Scenes/SampleScene_EngagementPilot.unity";
     private const string ProductionOutput = "Builds/Android/RealidadeA-production.aab";
     private const string DefaultBundleVersion = "0.2.0";
@@ -22,15 +24,34 @@ public static class AndroidBuildPipeline
     [MenuItem("RA/Build/Engagement Pilot APK")]
     public static void BuildEngagementPilotApk()
     {
-        if (!File.Exists(EngagementPilotScene))
-        {
-            throw new FileNotFoundException("Cena piloto de engagement ausente.", EngagementPilotScene);
-        }
+        RequireEngagementPilotScenes();
         BuildAndroid(
             EngagementPilotOutput,
             false,
             true,
-            new[] { ProjectValidation.MenuScene, EngagementPilotScene });
+            new[] { EngagementPilotMenuScene, EngagementPilotScene },
+            null,
+            null,
+            SceneRouteValidation.ValidateEngagementPilotOrThrow);
+    }
+
+    [MenuItem("RA/Build/Engagement Pilot E1.1 Device QA APK")]
+    public static void BuildEngagementPilotQaApk()
+    {
+        RequireEngagementPilotScenes();
+        BuildAndroid(
+            EngagementPilotQaOutput,
+            false,
+            true,
+            new[] { EngagementPilotMenuScene, EngagementPilotScene },
+            "0.3.1-e1",
+            211,
+            SceneRouteValidation.ValidateEngagementPilotOrThrow);
+    }
+
+    public static string[] GetEngagementPilotQaScenes()
+    {
+        return new[] { EngagementPilotMenuScene, EngagementPilotScene };
     }
 
     [MenuItem("RA/Build/Production AAB")]
@@ -41,16 +62,31 @@ public static class AndroidBuildPipeline
 
     private static void BuildAndroid(string defaultOutput, bool appBundle, bool developmentBuild)
     {
-        BuildAndroid(defaultOutput, appBundle, developmentBuild, ProjectValidation.GetRequiredScenes());
+        BuildAndroid(
+            defaultOutput,
+            appBundle,
+            developmentBuild,
+            ProjectValidation.GetRequiredScenes(),
+            null,
+            null,
+            SceneRouteValidation.ValidateBaselineOrThrow);
     }
 
     private static void BuildAndroid(
         string defaultOutput,
         bool appBundle,
         bool developmentBuild,
-        string[] scenes)
+        string[] scenes,
+        string exactBundleVersion,
+        int? exactVersionCode,
+        Action routeValidation)
     {
         ProjectValidation.ValidateOrThrow();
+        if (routeValidation == null)
+        {
+            throw new InvalidOperationException("A validação de rotas é obrigatória antes do build Android.");
+        }
+        routeValidation();
 
         if (scenes == null || scenes.Length == 0)
         {
@@ -71,11 +107,12 @@ public static class AndroidBuildPipeline
         }
 
         Directory.CreateDirectory(outputDirectory);
-        ConfigureVersionAndIdentity(appBundle);
-
         var previousBuildAppBundle = EditorUserBuildSettings.buildAppBundle;
         var previousScriptingBackend = PlayerSettings.GetScriptingBackend(BuildTargetGroup.Android);
         var previousArchitectures = PlayerSettings.Android.targetArchitectures;
+        var previousBundleVersion = PlayerSettings.bundleVersion;
+        var previousVersionCode = PlayerSettings.Android.bundleVersionCode;
+        var previousApplicationId = PlayerSettings.GetApplicationIdentifier(BuildTargetGroup.Android);
 
         string previousKeystoreName = PlayerSettings.Android.keystoreName;
         string previousKeystorePassword = PlayerSettings.Android.keystorePass;
@@ -91,6 +128,12 @@ public static class AndroidBuildPipeline
             }
 
             EditorUserBuildSettings.buildAppBundle = appBundle;
+            ConfigureVersionAndIdentity(appBundle, exactBundleVersion, exactVersionCode);
+
+            if (!appBundle && exactBundleVersion != null)
+            {
+                PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARMv7;
+            }
 
             if (appBundle)
             {
@@ -135,6 +178,9 @@ public static class AndroidBuildPipeline
             EditorUserBuildSettings.buildAppBundle = previousBuildAppBundle;
             PlayerSettings.SetScriptingBackend(BuildTargetGroup.Android, previousScriptingBackend);
             PlayerSettings.Android.targetArchitectures = previousArchitectures;
+            PlayerSettings.bundleVersion = previousBundleVersion;
+            PlayerSettings.Android.bundleVersionCode = previousVersionCode;
+            PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, previousApplicationId);
 
             PlayerSettings.Android.keystoreName = previousKeystoreName;
             PlayerSettings.Android.keystorePass = previousKeystorePassword;
@@ -144,10 +190,16 @@ public static class AndroidBuildPipeline
         }
     }
 
-    private static void ConfigureVersionAndIdentity(bool productionBuild)
+    private static void ConfigureVersionAndIdentity(
+        bool productionBuild,
+        string exactBundleVersion,
+        int? exactVersionCode)
     {
-        var bundleVersion = GetEnvironmentVariable("RA_BUNDLE_VERSION", DefaultBundleVersion);
-        var versionCodeText = GetEnvironmentVariable("RA_VERSION_CODE", DefaultVersionCode.ToString());
+        var bundleVersion = exactBundleVersion ??
+            GetEnvironmentVariable("RA_BUNDLE_VERSION", DefaultBundleVersion);
+        var versionCodeText = exactVersionCode.HasValue
+            ? exactVersionCode.Value.ToString()
+            : GetEnvironmentVariable("RA_VERSION_CODE", DefaultVersionCode.ToString());
 
         int versionCode;
         if (!int.TryParse(versionCodeText, out versionCode) || versionCode <= 0)
@@ -167,6 +219,20 @@ public static class AndroidBuildPipeline
         {
             throw new InvalidOperationException(
                 "Defina RA_APPLICATION_ID para gerar o AAB de produção, por exemplo: br.com.suaempresa.realidadea.");
+        }
+    }
+
+    private static void RequireEngagementPilotScenes()
+    {
+        if (!File.Exists(EngagementPilotMenuScene))
+        {
+            throw new FileNotFoundException(
+                "Menu piloto de engagement ausente.", EngagementPilotMenuScene);
+        }
+        if (!File.Exists(EngagementPilotScene))
+        {
+            throw new FileNotFoundException(
+                "Cena piloto de engagement ausente.", EngagementPilotScene);
         }
     }
 

@@ -11,6 +11,18 @@ public class SceneChange : MonoBehaviour
     //função para ir para RA
     public void sChange()
     {
+        if (string.IsNullOrWhiteSpace(sceneName) ||
+            !Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            var activeScene = SceneManager.GetActiveScene();
+            Debug.LogError(
+                "RA_SCENE_ROUTE_INVALID\n" +
+                "requestedScene=" + (sceneName ?? string.Empty) + "\n" +
+                "activeScene=" + activeScene.name + "\n" +
+                "buildSceneCount=" + SceneManager.sceneCountInBuildSettings);
+            return;
+        }
+
         SceneManager.LoadScene(sceneName);
     }
 
